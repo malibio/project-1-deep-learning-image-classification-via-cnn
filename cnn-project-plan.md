@@ -1,7 +1,4 @@
 # CNN Image Classification - Team Plan (G3: Alejandro, Baggiyam, Michael)
-
-
-
   - [x] Load and explore dataset together
   - [x] Train initial (base) model together - to get familiar
   - [x] Individually try different models and augmentations
