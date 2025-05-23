@@ -35,12 +35,19 @@ This repository contains our exploration of Convolutional Neural Networks (CNNs)
 - **Accuracy**: 89.10%
 - Comprehensive augmentation and regularization
 
-### 5. Model Deployment (`deployment.ipynb`)
+### 5. Transfer Learning with ResNet50V2 (`transfer_learning.ipynb`)
+- Pre-trained ResNet50V2 with custom classifier and proper 224×224 input sizing
+- **Accuracy**: 95.22% (best performing model)
+- Three-phase training: frozen base (88.12%) → partial unfreezing (94.44%) → full fine-tuning (95.22%)
+- 23.8M total parameters with custom data generator for memory-efficient resizing
+
+### 6. Model Deployment (`deployment.ipynb`)
 - **Gradio web application** for real-time CIFAR-10 image classification
+- **Live Demo**: [Try the model here](https://2b3c274341f1aa91cd.gradio.live/)
 - User-friendly drag-and-drop interface for uploading images
 - **Live predictions** with confidence scores for all 10 classes (top 3 displayed)
 - **Public sharing capability** with shareable URLs for easy access
-- Loads the best-performing VGG-style model (89.10% accuracy)
+- Loads the best-performing transfer learning model (95.22% accuracy)
 
 ## Key Technical Components
 
@@ -73,19 +80,20 @@ This repository contains our exploration of Convolutional Neural Networks (CNNs)
 | Model 2 | ResNet-inspired | 319K | 82.65% | Skip connections |
 | Model 3 | VGG-style | 307K | 84.46% | Parameter efficiency |
 | Model 4 | Deep VGG | 3.25M | 89.10% | Heavy regularization |
+| **Model 5** | **Transfer ResNet50V2** | **23.8M** | **95.22%** | **Pre-trained features (best performance)** |
 
 ## Repository Structure
 ```
-├── cnn_utils.py                          # Shared utilities and pipeline
-├── base_model.ipynb                      # Simple Baseline CNN (Model 1)
+├── cnn_utils.py                         # Shared utilities and pipeline
+├── base_model.ipynb                     # Simple Baseline CNN (Model 1)
 ├── residual_blocks_cnn.ipynb            # ResNet-Inspired CNN (Model 2)
 ├── modern_vgg_compact.ipynb             # Modern VGG-Style CNN (Model 3)
 ├── vgg_style_with_batchnorm.ipynb       # Deep CNN with Heavy Regularization (Model 4)
-├── transfer_learning.ipynb              # Transfer learning experiments (in development/testing)
+├── transfer_learning.ipynb              # Transfer learning with ResNet50V2 (Model 5)
 ├── deployment.ipynb                     # Gradio web app for model deployment
 ├── explore_data.ipynb                   # Data exploration and visualization
 ├── model_results/                       # Performance analysis documents
-└── README.md                           # Project documentation
+└── README.md                            # Project documentation
 ```
 
 ## Key Insights
