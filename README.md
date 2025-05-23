@@ -15,22 +15,22 @@ This repository contains our exploration of Convolutional Neural Networks (CNNs)
 
 ## Model Architectures Explored
 
-### 1. Simple Baseline CNN (`CNN Model 1`)
+### 1. Simple Baseline CNN (`base_model.ipynb`)
 - Basic 2-layer architecture (32→64 filters)
 - **Accuracy**: 70.74%
 - Minimal regularization, no data augmentation
 
-### 2. ResNet-Inspired CNN (`CNN Model 2`) 
+### 2. ResNet-Inspired CNN (`residual_blocks_cnn.ipynb`) 
 - Skip connections and modern regularization
 - **Accuracy**: 82.65%
 - BatchNormalization, progressive dropout, GlobalAveragePooling
 
-### 3. Modern VGG-Style CNN (`CNN Model 3`)
+### 3. Modern VGG-Style CNN (`modern_vgg_compact.ipynb`)
 - Paired convolutions with consistent regularization
 - **Accuracy**: 84.46%
 - Most parameter-efficient model (307K parameters)
 
-### 4. Deep CNN with Heavy Regularization (`CNN Model 4`)
+### 4. Deep CNN with Heavy Regularization (`vgg_style_with_batchnorm.ipynb`)
 - Deeper architecture (64→128→256 filters)
 - **Accuracy**: 89.10%
 - Comprehensive augmentation and regularization
