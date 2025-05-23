@@ -381,7 +381,7 @@ def save_model(model, filepath):
     print(f"Model saved to: {filepath}")
 
 
-def get_default_callbacks(patience=15):
+def get_default_callbacks(patience=20):
     """Get default training callbacks."""
     return [
         EarlyStopping(monitor='val_loss', patience=patience, restore_best_weights=True)
