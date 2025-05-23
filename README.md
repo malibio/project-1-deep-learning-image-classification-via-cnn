@@ -77,9 +77,13 @@ This repository contains our exploration of Convolutional Neural Networks (CNNs)
 ## Repository Structure
 ```
 ├── cnn_utils.py                          # Shared utilities and pipeline
-├── vgg_style_with_batchnorm.ipynb       # Main VGG-style implementation
-├── transfer_learning.ipynb              # Transfer learning experiments
+├── base_model.ipynb                      # Simple Baseline CNN (Model 1)
+├── residual_blocks_cnn.ipynb            # ResNet-Inspired CNN (Model 2)
+├── modern_vgg_compact.ipynb             # Modern VGG-Style CNN (Model 3)
+├── vgg_style_with_batchnorm.ipynb       # Deep CNN with Heavy Regularization (Model 4)
+├── transfer_learning.ipynb              # Transfer learning experiments (in development/testing)
 ├── deployment.ipynb                     # Gradio web app for model deployment
+├── explore_data.ipynb                   # Data exploration and visualization
 ├── model_results/                       # Performance analysis documents
 └── README.md                           # Project documentation
 ```
